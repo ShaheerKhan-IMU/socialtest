@@ -55,7 +55,7 @@ export default function ShareMenu() {
               </TwitterShareButton>
 
               <LinkedinShareButton
-                url={shareUrl}
+                url={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`}
                 title="Preorder | SwipeSavvy"
                 summary="Join the SwipeSavvy preorder today!"
                 source="SwipeSavvy"
