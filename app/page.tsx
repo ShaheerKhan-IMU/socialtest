@@ -42,10 +42,6 @@
 //   );
 // }
 
-
-
-
-
 import type { Metadata } from "next";
 import ShareMenu from "./components/shareMenu";
 

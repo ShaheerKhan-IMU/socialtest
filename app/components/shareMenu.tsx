@@ -1,5 +1,5 @@
 "use client";
-
+import { FaLinkedin } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -62,6 +62,16 @@ export default function ShareMenu() {
               >
                 <LinkedinIcon size={36} round />
               </LinkedinShareButton>
+              <a
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin
+                  size={28}
+                  className="hover:scale-110 transition-transform"
+                />
+              </a>
             </div>
           </motion.div>
         )}
