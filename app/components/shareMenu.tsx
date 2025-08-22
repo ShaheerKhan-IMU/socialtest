@@ -26,6 +26,9 @@ export default function ShareMenu() {
   const shareUrl = useShareUrl();
   const [open, setOpen] = useState(false);
   const shareUrlLK = encodeURIComponent("https://shaheerssift.netlify.app");
+  const title = "🚀 Preorder | SwipeSavvy - Get early access today!";
+  const quote = "Be the first to experience SwipeSavvy. Join the movement now!";
+  const hashtags = ["SwipeSavvy", "Preorder", "EarlyAccess"];
 
   return (
     <div
@@ -44,30 +47,34 @@ export default function ShareMenu() {
             className="mb-3 rounded-2xl bg-white/95 shadow-xl ring-1 ring-black/5 backdrop-blur px-3 py-2"
           >
             <div className="flex items-center gap-2">
-              <FacebookShareButton
-                url={shareUrl}
-                hashtag="#SwipeSavvy"
-                title="Preorder | SwipeSavvy, \nGet early access today!"
-              >
-                <FacebookIcon size={36} round />
-              </FacebookShareButton>
+              <div className="flex items-center gap-4">
+                {/* Facebook */}
+                <FacebookShareButton
+                  url={shareUrl}
+                  hashtag="Preorder | SwipeSavvy. Get early access today!"
+                >
+                  <FacebookIcon size={40} round />
+                </FacebookShareButton>
 
-              <TwitterShareButton
-                url={shareUrl}
-                title="Preorder | SwipeSavvy, \nGet early access today!"
-                hashtags={["SwipeSavvy", "Preorder"]}
-              >
-                <TwitterIcon size={36} round />
-              </TwitterShareButton>
+                {/* Twitter (now X) */}
+                <TwitterShareButton
+                  url={shareUrl}
+                  title={title}
+                  hashtags={hashtags}
+                >
+                  <TwitterIcon size={40} round />
+                </TwitterShareButton>
 
-              <LinkedinShareButton
-                url={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrlLK}`}
-                title="Preorder | SwipeSavvy"
-                summary="Join the SwipeSavvy preorder today!"
-                source="SwipeSavvy"
-              >
-                <LinkedinIcon size={36} round />
-              </LinkedinShareButton>
+                {/* LinkedIn */}
+                <LinkedinShareButton
+                  url={shareUrl}
+                  title={title}
+                  summary={quote} // acts like description
+                  source="SwipeSavvy"
+                >
+                  <LinkedinIcon size={40} round />
+                </LinkedinShareButton>
+              </div>
               <a
                 href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrlLK}`}
                 target="_blank"
