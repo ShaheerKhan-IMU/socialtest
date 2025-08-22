@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     images: [
       // → <meta property="og:image"...>
       {
-        url: "https://shaheerssift.netlify.app/og-image.png",
+        url: "https://shaheerssift.netlify.app/SSlogopreorder.png",
         width: 1200,
         height: 630,
         alt: "SwipeSavvy Preorder",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image", // → <meta name="twitter:card">
     title: "Preorder | SwipeSavvy", // → <meta name="twitter:title">
     description: "Join the SwipeSavvy preorder...", // → <meta name="twitter:description">
-    images: ["https://shaheerssift.netlify.app/og-image.png"], // → <meta name="twitter:image">
+    images: ["https://shaheerssift.netlify.app/SSlogopreorder.png"], // → <meta name="twitter:image">
   },
 };
 
@@ -34,7 +34,7 @@ export default function Home() {
       <h1 className="text-3xl font-bold">Preorder Page</h1>
       <p className="mt-4">Get early access to SwipeSavvy today!</p>
       <img
-        src="/og-image.png"
+        src="/SSlogopreorder.png"
         alt="Preorder Promo"
         className="mx-auto mt-6 rounded-lg shadow-lg"
       />
