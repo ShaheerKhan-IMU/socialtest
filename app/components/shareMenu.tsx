@@ -75,6 +75,7 @@ export default function ShareMenu() {
                 <FaLinkedin
                   size={28}
                   className="hover:scale-110 transition-transform"
+                  color="blue"
                 />
               </a>
             </div>
