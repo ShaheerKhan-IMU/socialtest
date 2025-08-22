@@ -25,6 +25,7 @@ function useShareUrl() {
 export default function ShareMenu() {
   const shareUrl = useShareUrl();
   const [open, setOpen] = useState(false);
+  const shareUrlLK = encodeURIComponent("https://shaheerssift.netlify.app");
 
   return (
     <div
@@ -60,7 +61,7 @@ export default function ShareMenu() {
               </TwitterShareButton>
 
               <LinkedinShareButton
-                url={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`}
+                url={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrlLK}`}
                 title="Preorder | SwipeSavvy"
                 summary="Join the SwipeSavvy preorder today!"
                 source="SwipeSavvy"
@@ -68,15 +69,13 @@ export default function ShareMenu() {
                 <LinkedinIcon size={36} round />
               </LinkedinShareButton>
               <a
-                href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`}
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrlLK}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedin
-                  size={28}
-                  className="hover:scale-110 transition-transform"
-                  color="blue"
-                />
+                <div className="p-2 bg-blue-600 rounded-full hover:bg-blue-700 transition">
+                  <FaLinkedin size={28} className="text-white" />
+                </div>
               </a>
             </div>
           </motion.div>
