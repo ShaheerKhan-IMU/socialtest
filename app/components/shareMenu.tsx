@@ -43,13 +43,18 @@ export default function ShareMenu() {
             className="mb-3 rounded-2xl bg-white/95 shadow-xl ring-1 ring-black/5 backdrop-blur px-3 py-2"
           >
             <div className="flex items-center gap-2">
-              <FacebookShareButton url={shareUrl} hashtag="#SwipeSavvy">
+              <FacebookShareButton
+                url={shareUrl}
+                hashtag="#SwipeSavvy"
+                title="Preorder | SwipeSavvy, \nGet early access today!"
+              >
                 <FacebookIcon size={36} round />
               </FacebookShareButton>
 
               <TwitterShareButton
                 url={shareUrl}
-                title="Preorder | SwipeSavvy — Get early access today!"
+                title="Preorder | SwipeSavvy, \nGet early access today!"
+                hashtags={["SwipeSavvy", "Preorder"]}
               >
                 <TwitterIcon size={36} round />
               </TwitterShareButton>
