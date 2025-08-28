@@ -9,6 +9,8 @@ import {
   FacebookIcon,
   TwitterIcon,
   LinkedinIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
 } from "react-share";
 import { Send } from "lucide-react";
 
@@ -84,6 +86,13 @@ export default function ShareMenu() {
                   <FaLinkedin size={28} className="text-white" />
                 </div>
               </a>
+              <WhatsappShareButton
+                url={shareUrl}
+                title={title}
+                separator=" - " // optional, separates title and link
+              >
+                <WhatsappIcon size={40} round />
+              </WhatsappShareButton>
             </div>
           </motion.div>
         )}
